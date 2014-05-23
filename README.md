@@ -16,7 +16,7 @@ At the end I guess there are no code shared between the two, TWRSkewedCollection
 
 ## MPSkewed
 
-![](img/screen.png)
+![](img/screenshot.png)
 
 ## License
 
