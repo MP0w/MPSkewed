@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DC842111-5F52-4EB1-8AA6-20C513B4119F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MPSkewed</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>280DBAC4-E542-4541-84A3-80A130A8EE2B</key>
+		<string>https://github.com/MP0w/MPSkewedCollectionView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MPSkewed/MPSkewed.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>280DBAC4-E542-4541-84A3-80A130A8EE2B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MP0w/MPSkewedCollectionView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>280DBAC4-E542-4541-84A3-80A130A8EE2B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>280DBAC4-E542-4541-84A3-80A130A8EE2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MPSkewedCollectionView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
