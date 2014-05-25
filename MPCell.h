@@ -18,6 +18,6 @@
 
 @property (nonatomic,readwrite) UIImage *image;
 @property (nonatomic,readwrite) NSIndexPath *index;
-
+@property (nonatomic,readwrite) NSInteger lineSpacing;
 
 @end

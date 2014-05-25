@@ -24,11 +24,13 @@ static NSString *kCell=@"cell";
     self.navigationController.navigationBarHidden=YES;
     
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-    layout.minimumLineSpacing=20;
+    layout.itemSize=CGSizeMake(self.view.width, 230);
+    layout.minimumLineSpacing=-230/3;
     
     _collectionView=[[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.delegate=self;
     _collectionView.dataSource=self;
+    _collectionView.backgroundColor=[UIColor whiteColor];
     [_collectionView registerClass:[MPCell class] forCellWithReuseIdentifier:kCell];
     [self.view addSubview:_collectionView];
     
@@ -36,10 +38,7 @@ static NSString *kCell=@"cell";
 }
 
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return CGSizeMake(self.view.width, 180);
-}
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
@@ -50,6 +49,7 @@ static NSString *kCell=@"cell";
     
     MPCell* cell = (MPCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
     
+    cell.lineSpacing=15;
     cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%i",indexPath.item%4+1]];
     cell.index=indexPath;
     
