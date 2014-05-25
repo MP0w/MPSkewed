@@ -9,15 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MPCell : UICollectionViewCell{
-    
-    UIImageView *imageView;
-    
+@interface MPSkewedCell : UICollectionViewCell{
+        
     UIBezierPath *realCellArea;
 }
 
 @property (nonatomic,readwrite) UIImage *image;
 @property (nonatomic,readwrite) NSIndexPath *index;
 @property (nonatomic,readwrite) NSInteger lineSpacing;
+@property (nonatomic,readwrite) UIImageView *imageView;
+
+@property (nonatomic,assign) CGFloat parallaxValue; //from 0 to 1
+
 
 @end

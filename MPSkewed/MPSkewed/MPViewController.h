@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+Frame.h"
 
-@interface MPViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>{
+@interface MPViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
     
     UICollectionView *_collectionView;
 }

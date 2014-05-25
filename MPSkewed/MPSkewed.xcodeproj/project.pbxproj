@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE827B351932174D00180C00 /* MPSkewedParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */; };
 		DEC71AE8192FB7730023E89E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AE7192FB7730023E89E /* Foundation.framework */; };
 		DEC71AEA192FB7730023E89E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AE9192FB7730023E89E /* CoreGraphics.framework */; };
 		DEC71AEC192FB7730023E89E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AEB192FB7730023E89E /* UIKit.framework */; };
@@ -21,7 +22,7 @@
 		DEC71B09192FB7730023E89E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AEB192FB7730023E89E /* UIKit.framework */; };
 		DEC71B11192FB7730023E89E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEC71B0F192FB7730023E89E /* InfoPlist.strings */; };
 		DEC71B13192FB7730023E89E /* MPSkewedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B12192FB7730023E89E /* MPSkewedTests.m */; };
-		DEC71B2B192FB7A80023E89E /* MPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B26192FB7A80023E89E /* MPCell.m */; };
+		DEC71B2B192FB7A80023E89E /* MPSkewedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B26192FB7A80023E89E /* MPSkewedCell.m */; };
 		DEC71B31192FBB260023E89E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC71B30192FBB260023E89E /* UIView+Frame.m */; };
 		DEC71B38192FBE000023E89E /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC71B33192FBE000023E89E /* 1@2x.png */; };
 		DEC71B39192FBE000023E89E /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC71B34192FBE000023E89E /* 2@2x.png */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE827B331932174D00180C00 /* MPSkewedParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPSkewedParallaxLayout.h; path = ../../MPSkewedParallaxLayout.h; sourceTree = "<group>"; };
+		DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPSkewedParallaxLayout.m; path = ../../MPSkewedParallaxLayout.m; sourceTree = "<group>"; };
 		DEC71AE4192FB7730023E89E /* MPSkewed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPSkewed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC71AE7192FB7730023E89E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEC71AE9192FB7730023E89E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,8 +63,8 @@
 		DEC71B0E192FB7730023E89E /* MPSkewedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPSkewedTests-Info.plist"; sourceTree = "<group>"; };
 		DEC71B10192FB7730023E89E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEC71B12192FB7730023E89E /* MPSkewedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPSkewedTests.m; sourceTree = "<group>"; };
-		DEC71B25192FB7A80023E89E /* MPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPCell.h; path = ../../MPCell.h; sourceTree = "<group>"; };
-		DEC71B26192FB7A80023E89E /* MPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPCell.m; path = ../../MPCell.m; sourceTree = "<group>"; };
+		DEC71B25192FB7A80023E89E /* MPSkewedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPSkewedCell.h; path = ../../MPSkewedCell.h; sourceTree = "<group>"; };
+		DEC71B26192FB7A80023E89E /* MPSkewedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPSkewedCell.m; path = ../../MPSkewedCell.m; sourceTree = "<group>"; };
 		DEC71B2F192FBB260023E89E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "../../UIView+Frame.h"; sourceTree = "<group>"; };
 		DEC71B30192FBB260023E89E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "../../UIView+Frame.m"; sourceTree = "<group>"; };
 		DEC71B33192FBE000023E89E /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
@@ -173,8 +176,10 @@
 		DEC71B2E192FB7AC0023E89E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DEC71B25192FB7A80023E89E /* MPCell.h */,
-				DEC71B26192FB7A80023E89E /* MPCell.m */,
+				DEC71B25192FB7A80023E89E /* MPSkewedCell.h */,
+				DEC71B26192FB7A80023E89E /* MPSkewedCell.m */,
+				DE827B331932174D00180C00 /* MPSkewedParallaxLayout.h */,
+				DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */,
 				DEC71B2F192FBB260023E89E /* UIView+Frame.h */,
 				DEC71B30192FBB260023E89E /* UIView+Frame.m */,
 			);
@@ -297,9 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE827B351932174D00180C00 /* MPSkewedParallaxLayout.m in Sources */,
 				DEC71B31192FBB260023E89E /* UIView+Frame.m in Sources */,
 				DEC71AF4192FB7730023E89E /* main.m in Sources */,
-				DEC71B2B192FB7A80023E89E /* MPCell.m in Sources */,
+				DEC71B2B192FB7A80023E89E /* MPSkewedCell.m in Sources */,
 				DEC71AFE192FB7730023E89E /* MPViewController.m in Sources */,
 				DEC71AF8192FB7730023E89E /* MPAppDelegate.m in Sources */,
 			);
@@ -429,6 +435,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPSkewed/MPSkewed-Prefix.pch";
 				INFOPLIST_FILE = "MPSkewed/MPSkewed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,6 +449,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MPSkewed/MPSkewed-Prefix.pch";
 				INFOPLIST_FILE = "MPSkewed/MPSkewed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,6 +514,7 @@
 				DEC71B18192FB7730023E89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEC71B19192FB7730023E89E /* Build configuration list for PBXNativeTarget "MPSkewedTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +523,7 @@
 				DEC71B1B192FB7730023E89E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

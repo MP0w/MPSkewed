@@ -7,9 +7,13 @@
 //
 
 #import "MPViewController.h"
-#import "MPCell.h"
+#import "MPSkewedCell.h"
+#import "MPSkewedParallaxLayout.h"
 
 static NSString *kCell=@"cell";
+
+
+#define PARALLAX_ENABLED 1
 
 @interface MPViewController ()
 
@@ -22,18 +26,28 @@ static NSString *kCell=@"cell";
     [super viewDidLoad];
 
     self.navigationController.navigationBarHidden=YES;
-    
+
+#ifndef PARALLAX_ENABLED
+    // you can use that if you don't need parallax
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
     layout.itemSize=CGSizeMake(self.view.width, 230);
-    layout.minimumLineSpacing=-230/3;
+    layout.minimumLineSpacing=-layout.itemSize.height/3; // must be always the itemSize/3
+    //use the layout you want as soon as you respect what I said... same height and line spacing =...
+
+#else
+    
+    MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];
+
+    
+#endif
+    
     
     _collectionView=[[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.delegate=self;
     _collectionView.dataSource=self;
-    _collectionView.backgroundColor=[UIColor whiteColor];
-    [_collectionView registerClass:[MPCell class] forCellWithReuseIdentifier:kCell];
+    _collectionView.backgroundColor=[UIColor blackColor];
+    [_collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCell];
     [self.view addSubview:_collectionView];
-    
     
 }
 
@@ -47,11 +61,11 @@ static NSString *kCell=@"cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    MPCell* cell = (MPCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
+    MPSkewedCell* cell = (MPSkewedCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
     
-    cell.lineSpacing=15;
-    cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%i",indexPath.item%4+1]];
+    cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",indexPath.item%5+1]];
     cell.index=indexPath;
+    
     
     return cell;
 }
@@ -59,7 +73,7 @@ static NSString *kCell=@"cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    NSLog(@"item %i",indexPath.item);
+    NSLog(@"item %li",(long)indexPath.item);
 
 }
 
