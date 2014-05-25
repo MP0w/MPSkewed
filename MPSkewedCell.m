@@ -138,7 +138,7 @@
         
         gradient=[CAGradientLayer layer];
         gradient.frame=_imageView.bounds;
-        gradient.colors=@[(id)[UIColor colorWithWhite:0 alpha:.95].CGColor,(id)[UIColor clearColor].CGColor];
+        gradient.colors=@[(id)[UIColor colorWithWhite:0 alpha:.85].CGColor,(id)[UIColor clearColor].CGColor];
         gradient.startPoint=CGPointMake(0, .5);
         gradient.endPoint=CGPointMake(.5, 0.35);
         [_imageView.layer addSublayer:gradient];

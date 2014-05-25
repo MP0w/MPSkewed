@@ -42,6 +42,7 @@ if you need parallax
 ```    
 
 ![](img/screen.png)
+![](img/withtext.png)
 
 ## License
 
