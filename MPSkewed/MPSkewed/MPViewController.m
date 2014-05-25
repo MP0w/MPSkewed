@@ -25,6 +25,7 @@ static NSString *kCell=@"cell";
 {
     [super viewDidLoad];
 
+    choosed=-1;
     self.navigationController.navigationBarHidden=YES;
 
 #ifndef PARALLAX_ENABLED
@@ -55,19 +56,20 @@ static NSString *kCell=@"cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return 30;
+    return choosed>=0 ? 1 : 30;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     MPSkewedCell* cell = (MPSkewedCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
     
-    cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",indexPath.item%5+1]];
-    cell.index=indexPath;
+    cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",(long) (choosed>=0 ? choosed : indexPath.item%5+1)]];
 
     NSString *text;
     
-    switch (indexPath.row%5) {
+    NSInteger index=choosed>=0 ? choosed : indexPath.row%5;
+   
+    switch (index) {
         case 0:
             text=@"DESERT\n hot";
             break;
@@ -97,6 +99,29 @@ static NSString *kCell=@"cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
     NSLog(@"item %li",(long)indexPath.item);
+
+    NSInteger bk=choosed;
+    
+    if(choosed==-1)
+        choosed=indexPath.item;
+    else choosed=-1;
+    
+    NSMutableArray *arr=[[NSMutableArray alloc] init];
+    
+    for (NSInteger i=0; i<30; i++) {
+        if (i!=choosed && i!=bk) {
+            [arr addObject:[NSIndexPath indexPathForItem:i inSection:0]];
+        }
+    }
+    
+    [collectionView performBatchUpdates:^{
+        if (choosed==-1) {
+            [collectionView insertItemsAtIndexPaths:arr];
+        }else [collectionView deleteItemsAtIndexPaths:arr];
+    } completion:^(BOOL finished) {
+        
+    }];
+
 
 }
 

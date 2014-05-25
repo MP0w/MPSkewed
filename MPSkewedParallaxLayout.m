@@ -63,4 +63,36 @@
     return YES;
 }
 
+
+
+- (UICollectionViewLayoutAttributes*)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath{
+    
+    UICollectionViewLayoutAttributes *attr=[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:itemIndexPath];
+    
+    CGRect frame=attr.frame;
+    frame.origin.x=-self.collectionView.frame.size.width;
+    frame.origin.y=((self.itemSize.height+self.minimumLineSpacing)*attr.indexPath.item)+self.itemSize.height/3-40;//40 is 2*cellSpacing
+    frame.size=self.itemSize;
+
+    attr.frame=frame;
+    attr.alpha=1;
+    
+    return attr;
+}
+
+- (UICollectionViewLayoutAttributes*)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath{
+    
+    UICollectionViewLayoutAttributes *attr=[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:itemIndexPath];
+    
+    CGRect frame=attr.frame;
+    frame.origin.x=-self.collectionView.frame.size.width;
+    frame.origin.y=((self.itemSize.height+self.minimumLineSpacing)*attr.indexPath.item)+self.itemSize.height/3-40;//40 is 2*cellSpacing
+    frame.size=self.itemSize;
+    attr.frame=frame;
+    attr.alpha=1;
+
+    return attr;
+}
+
+
 @end

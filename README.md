@@ -1,7 +1,7 @@
 MPSkewed
 =================
-![](img/inaction.gif)
 
+![](img/inaction2.gif)
 
 ## History
 
@@ -40,6 +40,8 @@ if you need parallax
 ```objective-c
     MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];    
 ```    
+
+![](img/inaction.gif)
 
 ![](img/withtext.png)
 ![](img/screen.png)

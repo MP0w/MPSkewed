@@ -17,7 +17,6 @@
 }
 
 @property (nonatomic,readwrite) UIImage *image;
-@property (nonatomic,readwrite) NSIndexPath *index;
 @property (nonatomic,readwrite) NSInteger lineSpacing;
 @property (nonatomic,readwrite) UIImageView *imageView;
 @property (nonatomic,readwrite) UILabel *textLabel;

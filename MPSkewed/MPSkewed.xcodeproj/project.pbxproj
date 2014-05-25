@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE827B351932174D00180C00 /* MPSkewedParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */; };
+		DE827B381932733D00180C00 /* MPSkewedTransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE827B371932733D00180C00 /* MPSkewedTransitionLayout.m */; };
 		DEC71AE8192FB7730023E89E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AE7192FB7730023E89E /* Foundation.framework */; };
 		DEC71AEA192FB7730023E89E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AE9192FB7730023E89E /* CoreGraphics.framework */; };
 		DEC71AEC192FB7730023E89E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC71AEB192FB7730023E89E /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		DE827B331932174D00180C00 /* MPSkewedParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPSkewedParallaxLayout.h; path = ../../MPSkewedParallaxLayout.h; sourceTree = "<group>"; };
 		DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPSkewedParallaxLayout.m; path = ../../MPSkewedParallaxLayout.m; sourceTree = "<group>"; };
+		DE827B361932733D00180C00 /* MPSkewedTransitionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPSkewedTransitionLayout.h; path = ../../MPSkewedTransitionLayout.h; sourceTree = "<group>"; };
+		DE827B371932733D00180C00 /* MPSkewedTransitionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPSkewedTransitionLayout.m; path = ../../MPSkewedTransitionLayout.m; sourceTree = "<group>"; };
 		DEC71AE4192FB7730023E89E /* MPSkewed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPSkewed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC71AE7192FB7730023E89E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DEC71AE9192FB7730023E89E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				DEC71B26192FB7A80023E89E /* MPSkewedCell.m */,
 				DE827B331932174D00180C00 /* MPSkewedParallaxLayout.h */,
 				DE827B341932174D00180C00 /* MPSkewedParallaxLayout.m */,
+				DE827B361932733D00180C00 /* MPSkewedTransitionLayout.h */,
+				DE827B371932733D00180C00 /* MPSkewedTransitionLayout.m */,
 				DEC71B2F192FBB260023E89E /* UIView+Frame.h */,
 				DEC71B30192FBB260023E89E /* UIView+Frame.m */,
 			);
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE827B381932733D00180C00 /* MPSkewedTransitionLayout.m in Sources */,
 				DE827B351932174D00180C00 /* MPSkewedParallaxLayout.m in Sources */,
 				DEC71B31192FBB260023E89E /* UIView+Frame.m in Sources */,
 				DEC71AF4192FB7730023E89E /* main.m in Sources */,
