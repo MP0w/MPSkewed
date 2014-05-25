@@ -45,7 +45,7 @@ static NSString *kCell=@"cell";
     _collectionView=[[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.delegate=self;
     _collectionView.dataSource=self;
-    _collectionView.backgroundColor=[UIColor blackColor];
+    _collectionView.backgroundColor=[UIColor whiteColor];
     [_collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCell];
     [self.view addSubview:_collectionView];
     
@@ -65,7 +65,31 @@ static NSString *kCell=@"cell";
     
     cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",indexPath.item%5+1]];
     cell.index=indexPath;
+
+    NSString *text;
     
+    switch (indexPath.row%5) {
+        case 0:
+            text=@"DESERT\n hot";
+            break;
+        case 1:
+            text=@"MOUNTAIN\n cold";
+            break;
+        case 2:
+            text=@"BLAH\n warm";
+            break;
+        case 3:
+            text=@"SUNSET\n red";
+            break;
+        case 4:
+            text=@"AJACCIO\n beach";
+            break;
+        default:
+            break;
+            
+    }
+    
+    cell.text=text;
     
     return cell;
 }

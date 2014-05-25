@@ -12,12 +12,16 @@
 @interface MPSkewedCell : UICollectionViewCell{
         
     UIBezierPath *realCellArea;
+    
+    CAGradientLayer *gradient;
 }
 
 @property (nonatomic,readwrite) UIImage *image;
 @property (nonatomic,readwrite) NSIndexPath *index;
 @property (nonatomic,readwrite) NSInteger lineSpacing;
 @property (nonatomic,readwrite) UIImageView *imageView;
+@property (nonatomic,readwrite) UILabel *textLabel;
+@property (nonatomic,readwrite) NSString *text;
 
 @property (nonatomic,assign) CGFloat parallaxValue; //from 0 to 1
 

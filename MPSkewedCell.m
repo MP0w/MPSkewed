@@ -128,4 +128,42 @@
     self.parallaxValue=parallaxValue;
 }
 
+#define DEGTORAD(D)((D * 3.14) / 180.0) // Converts Degrees to radians
+
+
+- (void)setText:(NSString *)text{
+    _text=text;
+    
+    if (!gradient && text) {
+        
+        gradient=[CAGradientLayer layer];
+        gradient.frame=_imageView.bounds;
+        gradient.colors=@[(id)[UIColor colorWithWhite:0 alpha:.95].CGColor,(id)[UIColor clearColor].CGColor];
+        gradient.startPoint=CGPointMake(0, .5);
+        gradient.endPoint=CGPointMake(.5, 0.35);
+        [_imageView.layer addSublayer:gradient];
+        
+    }else if(!text){
+        [gradient removeFromSuperlayer]; gradient=nil;
+    }
+    
+    if (!self.textLabel) {
+        
+        CGFloat realH=self.height*2/3-self.lineSpacing;
+        CGFloat latoA=realH/3;
+
+        self.textLabel=[[UILabel alloc] initWithFrame:CGRectMake(10,latoA/2, self.width-20, realH)];
+        self.textLabel.layer.anchorPoint=CGPointMake(.5, .5);
+        self.textLabel.font=[UIFont fontWithName:@"HelveticaNeue-ultralight" size:38];
+        self.textLabel.numberOfLines=3;
+        self.textLabel.textColor=[UIColor whiteColor];
+        self.textLabel.shadowColor=[UIColor blackColor];
+        self.textLabel.shadowOffset=CGSizeMake(1, 1);
+        
+        self.textLabel.transform=CGAffineTransformMakeRotation(-(asin(latoA/(sqrt(self.width*self.width+latoA*latoA)))));
+        [self addSubview:self.textLabel];
+    }
+    
+    self.textLabel.text=text;
+}
 @end
