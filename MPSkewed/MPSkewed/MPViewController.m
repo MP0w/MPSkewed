@@ -32,8 +32,7 @@ static NSString *kCell=@"cell";
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
     layout.itemSize=CGSizeMake(self.view.width, 230);
     layout.minimumLineSpacing=-layout.itemSize.height/3; // must be always the itemSize/3
-    //use the layout you want as soon as you respect what I said... same height and line spacing =...
-
+    //use the layout you want as soon as you recalculate the proper spacing if you made different sizes
 #else
     
     MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];
