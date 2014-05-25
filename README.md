@@ -41,8 +41,8 @@ if you need parallax
     MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];    
 ```    
 
-![](img/screen.png)
 ![](img/withtext.png)
+![](img/screen.png)
 
 ## License
 
