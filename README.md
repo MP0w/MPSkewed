@@ -48,4 +48,4 @@ if you need parallax
 
 ## License
 
-Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php).  See LICENSE for the full details.
+See LICENSE for the full details.
