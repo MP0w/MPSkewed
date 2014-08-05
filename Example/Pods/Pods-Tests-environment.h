@@ -6,21 +6,9 @@
 // project.
 
 
-// Expecta
-#define COCOAPODS_POD_AVAILABLE_Expecta
-#define COCOAPODS_VERSION_MAJOR_Expecta 0
-#define COCOAPODS_VERSION_MINOR_Expecta 3
-#define COCOAPODS_VERSION_PATCH_Expecta 1
-
 // MPSkewed
 #define COCOAPODS_POD_AVAILABLE_MPSkewed
 #define COCOAPODS_VERSION_MAJOR_MPSkewed 0
 #define COCOAPODS_VERSION_MINOR_MPSkewed 1
 #define COCOAPODS_VERSION_PATCH_MPSkewed 0
-
-// Specta
-#define COCOAPODS_POD_AVAILABLE_Specta
-#define COCOAPODS_VERSION_MAJOR_Specta 0
-#define COCOAPODS_VERSION_MINOR_Specta 2
-#define COCOAPODS_VERSION_PATCH_Specta 1
 
