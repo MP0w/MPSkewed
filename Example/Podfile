@@ -1,0 +1,10 @@
+target 'MPSkewed', :exclusive => true do
+  pod "MPSkewed", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "MPSkewed", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end

@@ -1,20 +1,18 @@
-# MPSkewed
+#
+# Be sure to run `pod lib lint MPSkewed.podspec' to ensure this is a
+# valid spec and remove all comments before submitting the spec.
+#
+# Any lines starting with a # are optional, but encouraged
+#
+# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+#
 
-![](img/inaction2.gif)
-![](img/inaction.gif)
-
-[![CI Status](http://img.shields.io/travis/Alex Manzella/MPSkewed.svg?style=flat)](https://travis-ci.org/Alex Manzella/MPSkewed)
-[![Version](https://img.shields.io/cocoapods/v/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
-[![License](https://img.shields.io/cocoapods/l/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
-[![Platform](https://img.shields.io/cocoapods/p/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
-
-
-## Installation
-
-MPSkewed is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-pod "MPSkewed"
+Pod::Spec.new do |s|
+  s.name             = "MPSkewed"
+  s.version          = "0.1.0"
+  s.summary          = "Skewed collection view cells with Parallax inspired by http://capptivate.co/2014/01/18/timbre-2/."
+  
+  s.description      = <<-DESC
 
 ## History
 
@@ -30,7 +28,6 @@ Instead of use a custom collectionView+cell+layout here you just have to use the
 
 At the end I guess there is no code shared between the two, TWRSkewedCollectionView is just simple to use but not really reusable/customizable since it does all inside the collection view subclass and the delegate and datasource are broken, however it's a good work, just I wanted it different.
 
-
 ## MPSkewed
 If you want to have the skewed cell without parallax just use the cell class, just note that you should use a collection view layout like the flow layout in wich you have all the cell's height equal and the line spacing equal to -height/3 (that even resolve the problem that cell is reused before it really disappear because of the imageview that go outside the cell).
 This is the more clean way to have cell tappable everywhere and you can adjust the padding from the cells using the lineSpacing property of MPSkewedCell.
@@ -38,35 +35,21 @@ I could use an internal delegate + objcRuntime to preserve the delegates [like I
 the only problem of my new choice is that : you can't use differents sizes for the cells and the real itemSize is different from the one you specify,
 passing 300 it become : 300*2/3-lineSpacing.
 If some people will tell me that this choice is not the best maybe I will return to my initial approach [my initial approach](https://github.com/MP0w/TWRSkewedCollectionView/commits/master)
+                       DESC
+                       
+  s.homepage         = "https://github.com/MP0w/MPSkewed"
+  s.screenshots      = "https://raw.githubusercontent.com/MP0w/MPSkewed/master/img/inaction.gif"
+  s.license          = 'BSD'
+  s.author           = { "Alex Manzella" => "manzopower@icloud.com" }
+  s.source           = { :git => "https://github.com/MP0w/MPSkewed.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/manzopower'
 
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
 
+  s.source_files = 'Classes/'
 
-resume :
-```objective-c
-    // you can use that if you don't need parallax
-    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize=CGSizeMake(self.view.width, 230);
-    layout.minimumLineSpacing=-layout.itemSize.height/3; // must be always the itemSize/3
-    
-    //use the layout you want as soon as you recalculate the proper spacing if you made different sizes
-```   
-if you need parallax
-```objective-c
-    MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];    
-```    
-
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Author
-
-Alex Manzella, manzopower@icloud.com , Twitter : @manzopower
-
-## License
-
-MPSkewed is available under the BSD license. See the LICENSE file for more info.
-
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
+end
