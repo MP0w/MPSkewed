@@ -3,7 +3,7 @@
 ![](img/inaction2.gif)
 ![](img/inaction.gif)
 
-[![CI Status](http://img.shields.io/travis/Alex Manzella/MPSkewed.svg?style=flat)](https://travis-ci.org/Alex Manzella/MPSkewed)
+[![CI Status](http://img.shields.io/travis/MP0w/MPSkewed.svg?style=flat)](https://travis-ci.org/MP0w/MPSkewed)
 [![Version](https://img.shields.io/cocoapods/v/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
 [![License](https://img.shields.io/cocoapods/l/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
 [![Platform](https://img.shields.io/cocoapods/p/MPSkewed.svg?style=flat)](http://cocoadocs.org/docsets/MPSkewed)
