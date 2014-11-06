@@ -10,7 +10,6 @@
 
 @interface UIView (Frame)
 
-
 @property(nonatomic,readwrite) CGFloat x,y,width,height;
 
 @end

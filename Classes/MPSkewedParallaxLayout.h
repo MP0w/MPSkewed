@@ -10,5 +10,4 @@
 
 @interface MPSkewedParallaxLayout : UICollectionViewFlowLayout
 
-
 @end
