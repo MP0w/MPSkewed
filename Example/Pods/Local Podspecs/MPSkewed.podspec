@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MPSkewed"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Skewed collection view cells with Parallax inspired by http://capptivate.co/2014/01/18/timbre-2/."
   
   s.description      = <<-DESC
@@ -50,6 +50,5 @@ If some people will tell me that this choice is not the best maybe I will return
   s.source_files = 'Classes/'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
 end

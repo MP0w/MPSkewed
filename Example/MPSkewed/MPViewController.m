@@ -10,119 +10,82 @@
 #import "MPSkewedCell.h"
 #import "MPSkewedParallaxLayout.h"
 
-static NSString *kCell=@"cell";
+static NSString *kCellId = @"cellId";
 
+@interface MPViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
 
-#define PARALLAX_ENABLED 1
-
-@interface MPViewController ()
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
 @implementation MPViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     
-    choosed=-1;
-    self.navigationController.navigationBarHidden=YES;
-    
-#ifndef PARALLAX_ENABLED
-    // you can use that if you don't need parallax
-    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize=CGSizeMake(self.view.width, 230);
-    layout.minimumLineSpacing=-layout.itemSize.height/3; // must be always the itemSize/3
-    //use the layout you want as soon as you recalculate the proper spacing if you made different sizes
-#else
-    
-    MPSkewedParallaxLayout *layout=[[MPSkewedParallaxLayout alloc] init];
-    
-    
-#endif
-    
-    
-    _collectionView=[[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-    _collectionView.delegate=self;
-    _collectionView.dataSource=self;
-    _collectionView.backgroundColor=[UIColor whiteColor];
-    [_collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCell];
-    [self.view addSubview:_collectionView];
-    
+    MPSkewedParallaxLayout *layout = [[MPSkewedParallaxLayout alloc] init];
+    layout.lineSpacing = 2;
+    layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 250);
+
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
+    [self.view addSubview:self.collectionView];
 }
 
-
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    
-    return choosed>=0 ? 1 : 30;
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [(MPSkewedParallaxLayout *)self.collectionView.collectionViewLayout setItemSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 250)];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    MPSkewedCell* cell = (MPSkewedCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
-    
-    cell.image=[UIImage imageNamed:[NSString stringWithFormat:@"%li",(long) (choosed>=0 ? choosed : indexPath.item%5+1)]];
-    
-    NSString *text;
-    
-    NSInteger index=choosed>=0 ? choosed : indexPath.row%5;
-    
-    switch (index) {
+- (NSString *)titleForIndex:(NSInteger)index {
+    NSString *text = nil;
+    switch (index - 1) {
         case 0:
-            text=@"DESERT\n hot";
+            text = @"DESERT\n hot";
             break;
         case 1:
-            text=@"MOUNTAIN\n cold";
+            text = @"MOUNTAIN\n cold";
             break;
         case 2:
-            text=@"BLAH\n warm";
+            text = @"BLAH\n warm";
             break;
         case 3:
-            text=@"SUNSET\n red";
+            text = @"SUNSET\n red";
             break;
         case 4:
-            text=@"AJACCIO\n beach";
+            text = @"AJACCIO\n beach";
             break;
         default:
             break;
-            
     }
     
-    cell.text=text;
+    return text;
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 30; // random
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger index = indexPath.item % 5 + 1;
+    MPSkewedCell* cell = (MPSkewedCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
+    cell.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd", index]];
+    cell.text = [self titleForIndex:index];
     
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@"item %li",(long)indexPath.item);
-    
-    NSInteger bk=choosed;
-    
-    if(choosed==-1)
-        choosed=indexPath.item;
-    else choosed=-1;
-    
-    NSMutableArray *arr=[[NSMutableArray alloc] init];
-    
-    for (NSInteger i=0; i<30; i++) {
-        if (i!=choosed && i!=bk) {
-            [arr addObject:[NSIndexPath indexPathForItem:i inSection:0]];
-        }
-    }
-    
-    [collectionView performBatchUpdates:^{
-        if (choosed==-1) {
-            [collectionView insertItemsAtIndexPaths:arr];
-        }else [collectionView deleteItemsAtIndexPaths:arr];
-    } completion:^(BOOL finished) {
-        
-    }];
-    
-    
+    NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
 }
 
 @end

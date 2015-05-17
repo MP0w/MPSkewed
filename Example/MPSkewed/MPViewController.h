@@ -7,15 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Frame.h"
 
-@interface MPViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
-    
-    UICollectionView *_collectionView;
-    
-    NSInteger choosed;
-}
-
-
+@interface MPViewController : UIViewController
 
 @end

@@ -25,11 +25,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6AAD54EB40094FB5BD3FFC41 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E60072CE61C4CA5A85D8F43 /* libPods-Tests.a */; };
 		DE9915DF1A0BEE3A0003DF41 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9915DE1A0BEE3A0003DF41 /* Launch Screen.xib */; };
-		DEF08BB1199119A700342D08 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF08BAC199119A700342D08 /* 1@2x.png */; };
-		DEF08BB2199119A700342D08 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF08BAD199119A700342D08 /* 2@2x.png */; };
-		DEF08BB3199119A700342D08 /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF08BAE199119A700342D08 /* 3@2x.png */; };
-		DEF08BB4199119A700342D08 /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF08BAF199119A700342D08 /* 4@2x.png */; };
-		DEF08BB5199119A700342D08 /* 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEF08BB0199119A700342D08 /* 5@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +66,6 @@
 		9E60072CE61C4CA5A85D8F43 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC8355C264A456CA05A8D7B /* Pods-MPSkewed.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MPSkewed.xcconfig"; path = "Pods/Pods-MPSkewed.xcconfig"; sourceTree = "<group>"; };
 		DE9915DE1A0BEE3A0003DF41 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
-		DEF08BAC199119A700342D08 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
-		DEF08BAD199119A700342D08 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
-		DEF08BAE199119A700342D08 /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
-		DEF08BAF199119A700342D08 /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
-		DEF08BB0199119A700342D08 /* 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@2x.png"; sourceTree = "<group>"; };
 		E77E3A5F217C456D842DDCFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,11 +140,6 @@
 				DE9915DE1A0BEE3A0003DF41 /* Launch Screen.xib */,
 				6003F5A5195388D20070C39A /* MPViewController.h */,
 				6003F5A6195388D20070C39A /* MPViewController.m */,
-				DEF08BAC199119A700342D08 /* 1@2x.png */,
-				DEF08BAD199119A700342D08 /* 2@2x.png */,
-				DEF08BAE199119A700342D08 /* 3@2x.png */,
-				DEF08BAF199119A700342D08 /* 4@2x.png */,
-				DEF08BB0199119A700342D08 /* 5@2x.png */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -282,14 +267,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEF08BB5199119A700342D08 /* 5@2x.png in Resources */,
 				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
-				DEF08BB4199119A700342D08 /* 4@2x.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				DEF08BB1199119A700342D08 /* 1@2x.png in Resources */,
-				DEF08BB2199119A700342D08 /* 2@2x.png in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
-				DEF08BB3199119A700342D08 /* 3@2x.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				DE9915DF1A0BEE3A0003DF41 /* Launch Screen.xib in Resources */,
 			);

@@ -1,5 +1,5 @@
 PODS:
-  - MPSkewed (0.1.0)
+  - MPSkewed (0.2.0)
 
 DEPENDENCIES:
   - MPSkewed (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MPSkewed: d63a58385c7b6ea3572fa4940361c816083395f4
+  MPSkewed: 3e3bb5ce562c942a4431578daf2fcad5ce238863
 
 COCOAPODS: 0.33.1

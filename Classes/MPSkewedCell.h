@@ -1,25 +1,16 @@
 //
-//  TWRMyCell.h
-//  SkewedCollectionView
+//  MPSkewedCell.h
+//  MPSkewed
 //
-//  Created by Michelangelo Chasseur on 19/05/14.
-//  Copyright (c) 2014 Touchware. All rights reserved.
+//  Created by Alex Manzella on 17/05/15.
+//  Copyright (c) 2015 Alex Manzella. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+@interface MPSkewedCell : UICollectionViewCell
 
-@interface MPSkewedCell : UICollectionViewCell{
-        
-    UIBezierPath *realCellArea;
-    CAGradientLayer *gradient;
-}
-
-@property (nonatomic, readwrite) UIImage *image;
-@property (nonatomic, readwrite) NSInteger lineSpacing;
-@property (nonatomic, readwrite) UIImageView *imageView;
-@property (nonatomic, readwrite) UILabel *textLabel;
-@property (nonatomic, readwrite) NSString *text;
-@property (nonatomic, assign) CGFloat parallaxValue; //from 0 to 1
+@property (nonatomic, assign) UIImage *image;
+@property (nonatomic, assign) NSString *text;
 
 @end
